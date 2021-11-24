@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration:none;
+    text-align: center;
+    list-style: none;
+    font-family: cursive;
+    box-sizing: border-box;
+}
+header {
+    color:deepskyblue;
+    background-color:whitesmoke;
+    height: 5rem;
+    width: 100%;
+    display: flex;
+    position: fixed;
+    top:0
+}
+header h1 {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav {
+    width: 70%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+.item {
+    color: blue;
+    margin: 15px;
+}
+.item:hover {
+    background-color: gray;
+    color: chartreuse;
+    border-radius: 10px;
+    padding: 5px;
+    transition: 0.3s;
+    transform:scale(1.1)
+}
+.ti {
+    margin: 5rem;
+    background-color: gray;
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 5rem;
+    justify-content: space-around;
+}
+.cardb {
+    width: 40rem;
+    height: 20rem;
+    margin-top: 1rem;
+    color: black;
+    border-radius: 2%;
+    box-shadow: 10px 10px #00000090;
+}
+.card {
+    color: black;
+    display: flex;
+    flex-direction: column;
+    height: 18rem;
+    width: 25rem;
+    margin: 1rem 1rem 5rem 1rem;
+    border-radius: 2%;
+    box-shadow: 10px 10px #00000090;
+}
+.card:hover{
+    color:limegreen;
+}
+hr {
+    color: blue;
+}
+.label-float {
+    position: relative;
+    padding-top: 13px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    color: blueviolet;
+    font-weight: 100;
+}
+input {
+    width: 100%;
+    padding: 5px;
+    display: inline-block;
+    border: 2px black;
+    outline: none;
+    font-size: 1rem;
+    transition: all 3s ease-out;
+}
+.sucess {
+    padding: 2px 10px 2px 10px;
+    border-radius: 7px;
+    font-size: 1rem;
+    background-color: rgba(253, 253, 253, 0.493);
+    transition: all 0.3s ease-out;
+}
+.sucess:hover {
+    background-color:lawngreen;
+    transform: scale(1.1);
+}
+.danger {
+    padding: 2px 10px 2px 10px;
+    border-radius: 7px;
+    font-size: 1rem;
+    background-color: rgba(253, 253, 253, 0.493);
+    transition: all 0.3s ease-out;
+}
+.danger:hover {
+    background-color:rgb(252, 0, 0);
+    transform: scale(1.1);
+}
+h3 {
+    display: flex;
+    justify-content: center;
+}
+.p1 {
+    color: blue;
+    font-size: 1rem;
+    width: 22%;
+    text-align: start;
+}
+.p2 {
+    width: 78%;
+}
