@@ -4,8 +4,7 @@
     text-decoration:none;
     text-align: center;
     list-style: none;
-    font-family: cursive;
-    box-sizing: border-box;
+    font-family: cursive
 }
 header {
     color:deepskyblue;
@@ -48,6 +47,7 @@ nav {
     display: flex;
     flex-wrap: wrap;
     margin-top: 5rem;
+    margin-bottom: 1rem;
     justify-content: space-around;
 }
 .cardb {

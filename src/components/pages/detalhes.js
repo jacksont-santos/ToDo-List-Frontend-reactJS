@@ -2,10 +2,16 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router";
 import { useNavigate, Link } from "react-router-dom";
 import Api from "../../api/api";
+import { Modal } from 'react-responsive-modal';
+import 'react-responsive-modal/styles.css';
 
 const Detail = () => {
   const { id } = useParams();
   const [tarefa, setTarefa] = useState({});
+
+  const [aberto, setAbrir] = useState(false);
+  const AbreModal = () => setAbrir(true);
+  const FechaModal = () => setAbrir(false);
 
   const getDadosById = async () => {
     const request = await Api.getById(id);
@@ -55,11 +61,18 @@ const Detail = () => {
           <Link to={`/editar/${tarefa._id}`}>
             <button className="sucess"> Editar</button>
           </Link>
-          <button className="danger" onClick={deletar}>
+          <button className="danger" onClick={AbreModal}>
             Excluir Tarefa
           </button>
         </div>
       </div>
+      <Modal open={aberto} onClose={FechaModal} center showCloseIcon={false}>
+      <h2>Deseja Excluir a Tarefa?</h2>
+      <div>
+      <button className="sucess" onClick={FechaModal}>Não</button>
+      <button className="danger" onClick={deletar}>Sim</button>
+      </div>
+    </Modal>
     </main>
   );
 };
